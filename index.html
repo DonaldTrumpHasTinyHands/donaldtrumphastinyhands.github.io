@@ -3,6 +3,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Donald Trump Has (Really) Tiny Hands Political Action Committee</title>
+  <link rel="icon" href="hand-of-no.jpg" type="image/x-icon" />
+
 </head>
 <style type="text/css">
   body, html { height: 100%; }
@@ -10,7 +12,7 @@
 
   body { position: relative; }
   .content {
-    background: transparent url(./hands-up.jpg) no-repeat top left;
+    background: #15140F url(./hands-up.jpg) no-repeat top left;
     background-size: cover;
     font-family: Impact sans-serif;
     font-size: 30px;
@@ -22,19 +24,30 @@
     position: absolute;
     padding: 50px;
   }
+  .inner {
+    width: 40%;
+  }
   .pointer {
     position: fixed;
     left: 14%;
     bottom: 30%;
+    display: none;
   }
+  a,
+  a:visited,
+  a:hover,
+  a:active { color: white; }
 </style>
 <body>
   <div class="content">
-    <h2>DONALD TRUMP HAS (REALLY)<br />TINY HANDS</h2>
-    <h1>Political Action Committee</h1>
-    <a href="./coming-soon.html"><button>DONATE</button></a>
-    <a href="./coming-soon.html"><button>SHOP</button></a>
-    <a href="./coming-soon.html"><button>REGISTER TO VOTE</button></a>
+    <div class="inner">
+      <h2>DONALD TRUMP HAS (REALLY)<br />TINY HANDS</h2>
+      <h1>Political Action Committee</h1>
+      <a target="_blank" href="http://petitions.moveon.org/sign/donald-trump-release.fb49?source=c.fb&r_by=13372831"><h3>SIGN THE PETITION - MEASURE THE HANDS</h3></a>
+      <a href="./coming-soon.html"><button>DONATE</button></a>
+      <a href="./coming-soon.html"><button>SHOP</button></a>
+      <a href="./coming-soon.html"><button>REGISTER TO VOTE</button></a>
+    </div>
     <div class="pointer">
       <span class="text">TINY</span>
       <span class="arrow"></span>
