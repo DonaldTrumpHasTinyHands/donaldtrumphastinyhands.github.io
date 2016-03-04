@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Donald Trump Has (Really) Tiny Hands Political Action Committee</title>
-  <link rel="icon" href="./hand-of-no.jpg" type="image/x-icon" />
+  <link rel="icon" href="./favicon.png" type="image/x-icon" />
   <meta property="og:title" content="DONALD TRUMP HAS (REALLY) TINY HANDS POLITICAL ACTION CMT" />
   <meta property="og:url" content="http://www.donaldtrumphastinyhands.com" />
   <meta property="og:description" content="SIGN THE PETITION - MEASURE THE HANDS ✋ 🕵!" >
@@ -19,6 +19,10 @@
 <link rel="stylesheet" type="text/css" href="./style.css">
 <body>
   <div class="content">
+    <div class="social">
+      <div class="fb-like" data-href="https://www.facebook.com/donaldtrumphastinyhands" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+      <a href="https://twitter.com/TrumpHandsPAC" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TrumpHandsPAC</a>
+    </div>
     <div class="inner">
       <h2>DONALD TRUMP HAS (REALLY)<br />TINY HANDS</h2>
       <h1>Political Action Committee</h1>
@@ -34,6 +38,7 @@
       <span class="arrow"></span>
     </div>
   </div>
+  <div id="fb-root"></div>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -43,6 +48,15 @@
     ga('create', 'UA-74696292-1', 'auto');
     ga('send', 'pageview');
 
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
   </script>
+  
 </body>
 </html>
