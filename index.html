@@ -5,12 +5,40 @@
   <title>Donald Trump Has (Really) Tiny Hands Political Action Committee</title>
 </head>
 <style type="text/css">
-  body {
+  body, html { height: 100%; }
+  body, html, .content { margin: 0; }
+
+  body { position: relative; }
+  .content {
     background: transparent url(./hands-up.jpg) no-repeat top left;
-    background-cover: stretch;
+    background-size: cover;
+    font-family: Impact sans-serif;
+    font-size: 30px;
+    color: white;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    padding: 50px;
+  }
+  .pointer {
+    position: fixed;
+    left: 14%;
+    bottom: 30%;
   }
 </style>
 <body>
-
+  <div class="content">
+    <h2>DONALD TRUMP HAS (REALLY)<br />TINY HANDS</h2>
+    <h1>Political Action Committee</h1>
+    <a href="./coming-soon.html"><button>DONATE</button></a>
+    <a href="./coming-soon.html"><button>SHOP</button></a>
+    <a href="./coming-soon.html"><button>REGISTER TO VOTE</button></a>
+    <div class="pointer">
+      <span class="text">TINY</span>
+      <span class="arrow"></span>
+    </div>
+  </div>
 </body>
 </html>
