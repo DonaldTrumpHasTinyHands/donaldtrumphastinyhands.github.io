@@ -3,17 +3,50 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Donald Trump Has (Really) Tiny Hands Political Action Committee</title>
+  <link rel="icon" href="hand-of-no.jpg" type="image/x-icon" />
+
 </head>
 <style type="text/css">
-  body {
-    background: transparent url(./hands-up.jpg) no-repeat top left;
-    background-cover: stretch;
+  body, html { height: 100%; }
+  body, html, .content { margin: 0; }
+
+  body { position: relative; }
+  .content {
+    background: #15140F url(./hands-up.jpg) no-repeat top left;
+    background-size: cover;
     font-family: Impact sans-serif;
     font-size: 30px;
     color: white;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    padding: 50px;
   }
+  .inner {
+    width: 40%;
+  }
+  .pointer {
+    position: fixed;
+    left: 14%;
+    bottom: 30%;
+    display: none;
+  }
+  a,
+  a:visited,
+  a:hover,
+  a:active { color: white; }
 </style>
 <body>
-  <h1>COMING SOON...</h1>
+  <div class="content">
+    <div class="inner">
+      <h1>COMING SOON</h1>
+    </div>
+    <div class="pointer">
+      <span class="text">TINY</span>
+      <span class="arrow"></span>
+    </div>
+  </div>
 </body>
 </html>
