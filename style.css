@@ -2,6 +2,7 @@
   body, html, .content { margin: 0; }
   body { position: relative; }
   h1, h2, h3, h4, h5, h6 { font-family: Impact, sans-serif; }
+  h1 { margin-bottom: 10px; }
   h5 { margin: 0; padding: 0; }
   .content {
     font-family: Impact, sans-serif;
@@ -56,7 +57,7 @@
     letter-spacing: 1px;
   }
   a button{
-    font-size: 1em;
+    font-size: 1.5em;
     letter-spacing: 2px;
   }
   a,
