@@ -23,6 +23,10 @@
     bottom: 30%;
     display: none;
   }
+  .social {
+    padding-top: 1em;
+  }
+  .logo { width: 120px; }
   .socal div form input { display: block; }
   a,
   a:visited,
