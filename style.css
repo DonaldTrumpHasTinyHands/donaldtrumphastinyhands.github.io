@@ -32,4 +32,15 @@
     right: 0;
     bottom: 0;
   }
-  
+    @media (max-width: 1080px) {
+    h1 { font-size: 44px; }
+    h2 { font-size: 36px; }
+    h3 { font-size: 28px; }
+    .content { background-position: top center; }
+  }
+  @media (max-width: 800px) {
+    .content .inner { width: 100% }
+    .social { width: 100%; }
+    .social div { float: left; margin: 0 8px;}
+    .social div input { float: left }
+  }
