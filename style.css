@@ -41,6 +41,7 @@
   }
   @media (max-width: 800px) {
     .content .inner { width: 100% }
+    .content { padding: 10px; }
     .social { width: 100%; }
     .social div { float: left; margin: 0 8px;}
     .socal div form input { display: inline-block; }
