@@ -43,6 +43,7 @@
     font-family: "Helvetica Neue", Helvetica-Neue, HelveticaNeue, Helvetica, arial, sans-serif;
     font-weight: bold;
   }
+  form button { padding: 10px 15px; }
   .zip { width: 120px; }
   button {
     margin-top: 20px;
@@ -53,6 +54,10 @@
     padding: 15px;
     font-size: .618em;
     letter-spacing: 1px;
+  }
+  a button{
+    font-size: 1em;
+    letter-spacing: 2px;
   }
   a,
   a:visited,
