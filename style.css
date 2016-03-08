@@ -1,10 +1,12 @@
   body, html { height: 100%; }
   body, html, .content { margin: 0; }
   body { position: relative; }
+  h1, h2, h3, h4, h5, h6 { font-family: Impact, sans-serif; }
+  h5 { margin: 0; padding: 0; }
   .content {
+    font-family: Impact, sans-serif;
     background: #15140F url(./hands-up.jpg) no-repeat top left;
     background-size: cover;
-    font-family: Impact sans-serif;
     font-size: 30px;
     color: white;
     top: 0;
@@ -15,7 +17,7 @@
     padding: 50px;
   }
   .inner {
-    width: 40%;
+    width: 100%;
   }
   .pointer {
     position: fixed;
@@ -23,26 +25,47 @@
     bottom: 30%;
     display: none;
   }
+  .social {
+    padding-top: 1em;
+  }
+  .logo { width: 120px; }
   .socal div form input { display: block; }
+  form { padding: 10px 0 80px; }
+  form input {
+    padding: 10px;
+    font:inherit;
+    background: transparent;
+    background: rgba(0,0,0,0.5);
+    color: #FFF;
+    border: 2px solid #FFF;
+    font-size: .5em;
+    margin: 10px 0 0;
+    font-family: "Helvetica Neue", Helvetica-Neue, HelveticaNeue, Helvetica, arial, sans-serif;
+    font-weight: bold;
+  }
+  .zip { width: 120px; }
+  button {
+    margin-top: 20px;
+    border: 0;
+    background: #c44042;
+    font: inherit;
+    color: #fff;
+    padding: 15px;
+    font-size: .618em;
+    letter-spacing: 1px;
+  }
   a,
   a:visited,
   a:hover,
   a:active { color: white; }
-  .social {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-    @media (max-width: 1080px) {
-    h1 { font-size: 60px; }
-    h2 { font-size: 40px; }
-    h3 { font-size: 30px; margin-top: 30px; }
+  .narrow-breakpoint { display: none; }
+  .large-breakpoint { display: block; }
+
+  @media (max-width: 1080px) {
     .content { background-position: top center; }
   }
-  @media (max-width: 800px) {
-    .content .inner { width: 100% }
-    .content { padding: 10px; }
-    .social { width: 100%; }
-    .social div { float: left; margin: 0 8px;}
-    .socal div form input { display: inline-block; }
+
+  @media (max-width: 666px) {
+    .narrow-breakpoint { display: block; }
+    .large-breakpoint { display: none; }
   }
