@@ -31,7 +31,7 @@
   }
   .logo { width: 120px; }
   .socal div form input { display: block; }
-  form { padding: 10px 0 80px; }
+  form { padding: 0 0 80px; }
   form input {
     padding: 10px;
     font:inherit;
@@ -46,7 +46,7 @@
   }
   form button { padding: 10px 15px; }
   .zip { width: 120px; }
-  button {
+  button, a.button {
     margin-top: 20px;
     border: 0;
     background: #c44042;
@@ -55,10 +55,14 @@
     padding: 15px;
     font-size: .618em;
     letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color .25s;
   }
-  a button{
-    font-size: 1.5em;
-    letter-spacing: 2px;
+  a.button { font-size: 1.5em; margin: .75em 0 1em; display: inline-block; padding: 15px 25px; }
+  button:hover, a.button:hover {
+    background-color: #a91e28;
+    transition: background-color .1s;
   }
   a,
   a:visited,
