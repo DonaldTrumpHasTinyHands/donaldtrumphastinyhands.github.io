@@ -79,8 +79,8 @@ p {
   font-size: .8em;
 }
 
-.video_box { float: right; }
-.video_box img { width: 300px; }
+.video_box { float: right;  margin-top: -80px; }
+.video_box img { width: 300px;}
 #lightbox_fade {
     display: none;
     position: absolute;
