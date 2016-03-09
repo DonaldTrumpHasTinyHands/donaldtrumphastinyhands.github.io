@@ -97,9 +97,10 @@ p {
 #lightbox_content {
     display: none;
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 10%;
+    left: 10%;
     width: 80%;
+    height: 50%;
     z-index:1002;
     overflow: auto;
 }
