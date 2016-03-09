@@ -32,13 +32,13 @@
             <input type="text" name="entry.1425224127" placeholder="Your Zip Code" class="zip">
             <button type="submit">GET UPDATES</button>
           </form>
+          <div class="video_box">
+            <a href="javascript:void(0)" onclick="OpenLightbox()">
+              <img src="./video.png" width="120">
+            </a>
+          </div>
         <div class="fb-wrap"><div class="fb-like" data-href="https://www.facebook.com/donaldtrumphastinyhands" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></div>
         <a href="https://twitter.com/TrumpHandsPAC" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TrumpHandsPAC</a>
-      </div>
-      <div class="video_box">
-        <a href="javascript:void(0)" onclick="OpenLightbox()">
-          <img src="./video.png" width="120">
-        </a>
       </div>
     </div>
     <div class="disclaimer">
@@ -68,9 +68,15 @@
 
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
     function OpenLightbox() {
-      lightbox_content.style.display='block'
-      lightbox_fade.style.display='block'
-      lightbox_iframe.src = lightbox_iframe.src_off
+      lightbox_content.style.display = 'block'
+      lightbox_fade.style.display = 'block'
+      lightbox_iframe.src = lightbox_iframe.getAttribute('off-src')
+      lightbox_fade.onclick = CloseLightBox
+    }
+    function CloseLightBox() {
+      lightbox_content.style.display = 'none'
+      lightbox_fade.style.display = 'none'
+      lightbox_fade.onclick = null
     }
   </script>
   
