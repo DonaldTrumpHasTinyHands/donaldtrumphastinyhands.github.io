@@ -79,14 +79,8 @@ p {
   font-size: .8em;
 }
 
-  @media (max-width: 1080px) {
-    .content { background-position: top center; }
-  }
-
-  @media (max-width: 666px) {
-    .narrow-breakpoint { display: block; }
-    .large-breakpoint { display: none; }
-  }
+.video_box { float: right; }
+.video_box img { width: 300px; }
 #lightbox_fade {
     display: none;
     position: absolute;
@@ -121,4 +115,14 @@ p {
   margin-right: 50px;
   text-align: center;
   background: rgba(0,0,0,.8);
+}
+
+@media (max-width: 1080px) {
+  .content { background-position: top center; }
+}
+
+@media (max-width: 666px) {
+  .narrow-breakpoint { display: block; }
+  .large-breakpoint { display: none; }
+  .video_box img { width: 120px; }
 }
