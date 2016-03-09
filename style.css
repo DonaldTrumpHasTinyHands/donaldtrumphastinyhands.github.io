@@ -74,6 +74,11 @@
   .narrow-breakpoint { display: none; }
   .large-breakpoint { display: block; }
 
+p {
+  font-family: "Helvetica Neue", Helvetica-Neue, HelveticaNeue, Helvetica, arial, sans-serif;
+  font-size: .8em;
+}
+
   @media (max-width: 1080px) {
     .content { background-position: top center; }
   }
