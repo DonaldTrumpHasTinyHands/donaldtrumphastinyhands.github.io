@@ -21,30 +21,35 @@
 <body>
   <div class="content">
     <div class="inner">
-    <img src="dththpac.png" class="logo" alt="Donald Trump Has Tiny Hands PAC Logo">
-    <h1>DONALD TRUMP HAS<br class="large-breakpoint" /> TINY HANDS PAC</h1>
-    <p>Lend a hand to help get our <br />#ReleaseTheMeasurements ad on TV!</p>
-    <a href="https://secure.actblue.com/contribute/page/trumphandspac" target="_blank" class="button">DONATE</a>
-    <div class="social">
-      <h5>Tiny Hands, HUGE News!</h5>
-        <form action="https://docs.google.com/forms/d/1B9X2FltWDbdDRcjnMD6NuZQK_S9x1-98hmL2Nyy8C5c/formResponse" target="_blank" method="POST" >
-          <input type="email" name="entry.905179320" placeholder="Your Email Address">
-          <input type="text" name="entry.1425224127" placeholder="Your Zip Code" class="zip">
-          <button type="submit">GET UPDATES</button>
-        </form>
-      <div class="fb-wrap"><div class="fb-like" data-href="https://www.facebook.com/donaldtrumphastinyhands" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></div>
-      <a href="https://twitter.com/TrumpHandsPAC" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TrumpHandsPAC</a>
-    </div>
-    </div>
-    <div class="pointer">
-      <span class="text">TINY</span>
-      <span class="arrow"></span>
+      <img src="dththpac.png" class="logo" alt="Donald Trump Has Tiny Hands PAC Logo">
+      <h1>DONALD TRUMP HAS<br class="large-breakpoint" /> TINY HANDS PAC</h1>
+      <p>Lend a hand to help get our <br />#ReleaseTheMeasurements ad on TV!</p>
+      <a href="https://secure.actblue.com/contribute/page/trumphandspac" target="_blank" class="button">DONATE</a>
+      <div class="social">
+        <h5>Tiny Hands, HUGE News!</h5>
+          <form action="https://docs.google.com/forms/d/1B9X2FltWDbdDRcjnMD6NuZQK_S9x1-98hmL2Nyy8C5c/formResponse" target="_blank" method="POST" >
+            <input type="email" name="entry.905179320" placeholder="Your Email Address">
+            <input type="text" name="entry.1425224127" placeholder="Your Zip Code" class="zip">
+            <button type="submit">GET UPDATES</button>
+          </form>
+        <div class="fb-wrap"><div class="fb-like" data-href="https://www.facebook.com/donaldtrumphastinyhands" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></div>
+        <a href="https://twitter.com/TrumpHandsPAC" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TrumpHandsPAC</a>
+      </div>
+      <div class="video_box">
+        <a href="javascript:void(0)" onclick="OpenLightbox()">
+          <img src="./video.png" width="120">
+        </a>
+      </div>
     </div>
     <div class="disclaimer">
       Paid for by Donald Trump Has Tiny Hands PAC. Not authorized by any candidate or candidate's committee.
     </div>
   </div>
   <div id="fb-root"></div>
+  <div id="lightbox_content">
+    <iframe id="lightbox_iframe" width="420" height="315" off-src="https://www.youtube.com/embed/KskujEVvl84?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div id="lightbox_fade" ></div>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -62,6 +67,11 @@
       fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
 
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    function OpenLightbox() {
+      lightbox_content.style.display='block'
+      lightbox_fade.style.display='block'
+      lightbox_iframe.src = lightbox_iframe.src_off
+    }
   </script>
   
 </body>
