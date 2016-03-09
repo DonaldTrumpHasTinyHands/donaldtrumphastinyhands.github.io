@@ -15,7 +15,10 @@
     bottom: 0;
     right: 0;
     position: absolute;
-    padding: 50px;
+    padding: 50px 50px 170px;
+    min-height: 100%;
+    position: relative;
+    box-sizing: border-box;
   }
   .inner {
     width: 100%;
@@ -79,3 +82,15 @@
     .narrow-breakpoint { display: block; }
     .large-breakpoint { display: none; }
   }
+
+.disclaimer {
+  font-family: "Helvetica Neue", Helvetica-Neue, HelveticaNeue, Helvetica, arial, sans-serif;
+  font-size: 16px;
+  border: 2px solid #FFF;
+  display: inline-block;
+  padding: 15px;
+  position: absolute;
+  bottom: 60px;
+  left: 50px;
+  background: rgba(0,0,0,.8);
+}
