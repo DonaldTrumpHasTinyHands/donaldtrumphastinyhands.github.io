@@ -87,10 +87,12 @@
   font-family: "Helvetica Neue", Helvetica-Neue, HelveticaNeue, Helvetica, arial, sans-serif;
   font-size: 16px;
   border: 2px solid #FFF;
-  display: inline-block;
+  display: block;
   padding: 15px;
   position: absolute;
   bottom: 60px;
   left: 50px;
+  margin-right: 50px;
+  text-align: center;
   background: rgba(0,0,0,.8);
 }
