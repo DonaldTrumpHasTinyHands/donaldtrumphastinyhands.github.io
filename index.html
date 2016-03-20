@@ -24,11 +24,11 @@
       <img src="dththpac.png" class="logo" alt="Americans Against Insecure Billionaires with Tiny Hands PAC Logo">
       <h1>Americans Against<br class="large-breakpoint" /> Insecure Billionaires<br class="large-breakpoint" /> with Tiny Hands PAC</h1>
       <p>Lend a hand to help get our <br />#ReleaseTheMeasurements ad on TV!</p>
-      <a href="https://secure.actblue.com/contribute/page/trumphandspac" target="_blank" class="button">SUPPORT THE AD</a>
-      <a href="https://tinyhandspac.storenvy.com/" target="_blank" class="button">SHOP</a>
+      <a href="https://secure.actblue.com/contribute/page/trumphandspac" target="_blank" class="button" onclick="ga('send', 'event', 'Click', 'Donate');">SUPPORT THE AD</a>
+      <a href="https://tinyhandspac.storenvy.com/" target="_blank" class="button" onclick="ga('send', 'event', 'Click', 'Shop');">SHOP</a>
       <div class="social">
         <div class="video_box">
-          <a href="javascript:void(0)" onclick="OpenLightbox()">
+          <a href="javascript:void(0)" onclick="OpenLightbox();ga('send', 'event', 'Click', 'Video');">
             <img src="./video.png" >
           </a>
         </div>
@@ -36,10 +36,10 @@
         <form action="https://docs.google.com/forms/d/1B9X2FltWDbdDRcjnMD6NuZQK_S9x1-98hmL2Nyy8C5c/formResponse" target="_blank" method="POST" >
           <input type="email" name="entry.905179320" placeholder="Your Email Address">
           <input type="text" name="entry.1425224127" placeholder="Your Zip Code" class="zip">
-          <button type="submit">GET UPDATES</button>
+          <button type="submit" onclick="ga('send', 'event', 'Click', 'Join');">GET UPDATES</button>
         </form>
-        <div class="fb-wrap"><div class="fb-like" data-href="https://www.facebook.com/donaldtrumphastinyhands" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></div>
-        <a href="https://twitter.com/TrumpHandsPAC" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @TrumpHandsPAC</a>
+        <div class="fb-wrap"><div class="fb-like" data-href="https://www.facebook.com/donaldtrumphastinyhands" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" onclick="ga('send', 'event', 'Click', 'Facebook');"></div></div>
+        <a href="https://twitter.com/TrumpHandsPAC" class="twitter-follow-button" data-show-count="false" data-size="large" onclick="ga('send', 'event', 'Click', 'Twitter');">Follow @TrumpHandsPAC</a>
       </div>
     </div>
     <div class="disclaimer">
@@ -55,7 +55,7 @@
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-74696292-1', 'auto');
     ga('send', 'pageview');
@@ -64,7 +64,7 @@
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
       fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
 
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
