@@ -92,7 +92,13 @@
       image: '',
 
     });
-
+    /**
+     * TODO:
+     *  - [ ] collect name, phone number, employer, post to form
+     *  - [ ] always redirect to https version
+     *  - [ ] send thank you email
+     *  - [ ] move donate form
+    **/
     function goDonate() {
       var amount = parseInt(event.target.getAttribute('data-express-amount')),
           dollers = (amount/100).toString()
