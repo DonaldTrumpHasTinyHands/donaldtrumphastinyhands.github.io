@@ -26,12 +26,28 @@
         margin: 0 40px 0 0;
         text-align: center;
       }
+    input { margin: 0 4px; }
+    #thanks .button {
+      width: 30%;
+      margin: 10px 2px;
+      font-size: .8em;
+    }
     .buttons { margin-top: 20px; }
   </style>
+  <script>
+    if( document.location.toString().match(/github\.io/) === null || document.location.protocol !== 'https:' ) { document.location = 'https://donaldtrumphastinyhands.github.io/dotcom/donate.html' }
+  </script>
 </head>
 <body>
   <div class="content">
-    <div class="inner">
+    <div style="display: none;" class="inner" id="thanks"> 
+      <img src="https://donaldtrumphastinyhands.github.io/dotcom/dththpac.png" class="logo" alt="Americans Against Insecure Billionaires with Tiny Hands PAC Logo">
+      <h2>We've really got to hand it to you - your support means a whole lot</h2>
+      <p>- Your Friends at Americans Against Insecure Billionaires with Tiny Hands PAC</p>
+      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://donaldtrumphastinyhands.github.io/dotcom/donate.html" class="button">Share on Facebook</a>
+      <a target="_blank" href="https://twitter.com/intent/tweet?vial=trumptinyhands&text=I+just+donated+to+@trumptinyhands+-+you+should+too&related=trumptinyhands&url=https://donaldtrumphastinyhands.github.io/dotcom/donate.html" class="button">Share on Twitter</a>
+    </div>
+    <div style="display: block;"  class="inner" id="amounts">
       <img src="https://donaldtrumphastinyhands.github.io/dotcom/dththpac.png" class="logo" alt="Americans Against Insecure Billionaires with Tiny Hands PAC Logo">
       <h1>Americans Against<br class="large-breakpoint" /> Insecure Billionaires<br class="large-breakpoint" /> with Tiny Hands PAC</h1>
       <p>Lend a hand to help get our <br />#ReleaseTheMeasurements ad on TV!</p>
@@ -83,31 +99,108 @@
       Paid for by Americans Against Insecure Billionaires with Tiny Hands PAC. Not authorized by any candidate or candidate's committee.
     </div>
   </div>
+  <div id="lightbox_content" style="height: 800px">
+    <form onSubmit="nextDonate(this)" style="padding: 10px; border: 2px solid white; background: #000; color: white; font-size: 32px">
+      <h3>Your Information</h3>
+      <p>
+        <input id="name_input" placeholder="Your Name">
+        <input type="email" id="email_input" placeholder="Your Email">
+      </p>
+      <p>
+        <input id="city_input" placeholder="Your City">
+        <select id="state_input"><option value="">Your State</option><option value="AL">AL</option><option value="AK">AK</option><option value="AZ">AZ</option><option value="AR">AR</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="IA">IA</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="ME">ME</option><option value="MD">MD</option><option value="MA">MA</option><option value="MI">MI</option><option value="MN">MN</option><option value="MS">MS</option><option value="MO">MO</option><option value="MT">MT</option><option value="NE">NE</option><option value="NV">NV</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NY">NY</option><option value="NC">NC</option><option value="ND">ND</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VT">VT</option><option value="VA">VA</option><option value="WA">WA</option><option value="WV">WV</option><option value="WI">WI</option><option value="WY">WY</option></select>
+      </p>
+      <p>
+        <input id="employer_input" placeholder="Your Employer"><br />
+        <em style="font-size: 14px">(We need your employer to comply with Federal Election Laws)</em>
+      </p>
+      <p><button type="submit">Next</button></p>
+    </form>
+  </div>
+  <div id="lightbox_fade" ></div>
+
   <div id="fb-root"></div>
   <script>
-    var handler = StripeCheckout.configure({
-      key: 'pk_test_R09xJuCnryGzcnOLaXOpzfkM',
-      locale: 'auto',
-      token: function(token) {},
-      image: '',
+    var amount = 2000,
+        handler = StripeCheckout.configure({
+          key: 'pk_live_A2kJcpYemgN9x0yBwLyUzUxy',
+          locale: 'auto',
+          token: function(token) {
+            postForm(token.id)
+            amounts.style.display = 'none'
+            thanks.style.display = 'block'
+          },
+          image: '',
+        })
 
-    });
-    /**
-     * TODO:
-     *  - [ ] collect name, phone number, employer, post to form
-     *  - [ ] always redirect to https version
-     *  - [ ] send thank you email
-     *  - [ ] move donate form
-    **/
+
+    function postForm(token) {
+      var req = new XMLHttpRequest();
+      req.open("POST", "https://docs.google.com/forms/d/1KNysJvq_3J_hsWRPSAFZ_U8B-xtGfi_XJqXtBBYmBLY/formResponse", true);
+      req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+
+      var data = {
+        'entry.617638349': name_input.value,
+        'entry.1335579254': employer_input.value,
+        'entry.2019488712': city_input.value,
+        'entry.2018513609': state_input.value,
+        'entry.1093280422': email_input.value,
+        'entry.796202537': token,
+        'entry.1778107293': (amount/100).toString()
+      }
+      var request = ''
+      for(var i in data)  {
+        request += i + '=' + data[i] + '&'
+      }
+
+      req.send(request);
+    }
+
     function goDonate() {
-      var amount = parseInt(event.target.getAttribute('data-express-amount')),
-          dollers = (amount/100).toString()
+      amount = parseInt(event.target.getAttribute('data-express-amount'))
+      OpenLightbox()
+      return false
+    }
+    function nextDonate() {
+      var errored = false,
+          inputs = event.target.querySelectorAll('input, select')
+
+      Array.prototype.forEach.call(inputs, function(input) {
+        if( input.value.length < 1 ) {
+          errored = true
+          input.style.borderColor = 'red'
+        } else input.style.borderColor = 'white'
+      })
+
+      if( !errored ) {
+        openStripe()
+        CloseLightBox()
+      }
+      return false
+    }
+
+    function OpenLightbox() {
+      lightbox_content.style.display = 'block'
+      lightbox_fade.style.display = 'block'
+      lightbox_fade.onclick = CloseLightBox
+    }
+
+    function CloseLightBox() {
+      lightbox_content.style.display = 'none'
+      lightbox_fade.style.display = 'none'
+      lightbox_fade.onclick = null
+    }
+
+    function openStripe() {
+      var dollers = (amount/100).toString()
 
       handler.open({
         image: 'https://donaldtrumphastinyhands.github.io/dotcom/share-preview.jpg',
         name: 'Americans Against Insecure Billionaires with Tiny Hands PAC',
         description: '$'+dollers+'.00 Donation',
-        amount: amount
+        amount: amount,
+        email: email_input.value,
+        'panel-label': 'Donate',
       });
       return false
     }
