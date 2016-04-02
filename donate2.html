@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DONATE to Americans Against Insecure Billionaires with Tiny Hands PAC</title>
+  <link rel="icon" href="/favicon.jpg" type="image/x-icon" />
+  <meta charset="utf-8">
+  <meta property="og:title" content="DONATE to Americans Against Insecure Billionaires with Tiny Hands PAC" />
+  <meta property="og:url" content="https://www.donaldtrumphastinyhands.com/donate.html" />
+  <meta property="og:description" content="SUPPORT THE CAUSE - DONATE TO Americans Against Insecure Billionaires with Tiny Hands PAC ✋ 🕵!" >
+  <meta property="og:image" content="https://www.donaldtrumphastinyhands.com/share-preview.jpg" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@TrumpHandsPAC">
+  <meta name="twitter:title" content="DONATE to Americans Against Insecure Billionaires with Tiny Hands PAC" />
+  <meta name="twitter:description" content="SUPPORT THE CAUSE - DONATE TO Americans Against Insecure Billionaires with Tiny Hands PAC ✋ 🕵!" >
+  <meta name="twitter:image:src" content="https://www.donaldtrumphastinyhands.com/share-preview.jpg" />
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <style type="text/css">
+    .inner { width: 80%; }
+    .er_amt_button {
+        display: inline-block;
+        width: 360px;
+        margin: 0 40px 0 0;
+        text-align: center;
+      }
+    input { margin: 0 4px; }
+    #thanks .button {
+      width: 30%;
+      margin: 10px 2px;
+      font-size: .8em;
+    }
+    .buttons { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div style="display: none;" class="inner" id="thanks"> 
+      <img src="/dththpac.png" class="logo" alt="Americans Against Insecure Billionaires with Tiny Hands PAC Logo">
+      <h2>We've really got to hand it to you - your support means a whole lot</h2>
+      <p>- Your Friends at Americans Against Insecure Billionaires with Tiny Hands PAC</p>
+      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.donaldtrumphastinyhands.com/donate.html" class="button">Share on Facebook</a>
+      <a target="_blank" href="https://twitter.com/intent/tweet?vial=trumptinyhands&text=I+just+donated+to+@trumptinyhands+-+you+should+too&related=trumptinyhands&url=https://www.donaldtrumphastinyhands.com/donate.html" class="button">Share on Twitter</a>
+    </div>
+    <div style="display: block;"  class="inner" id="amounts">
+      <img src="/dththpac.png" class="logo" alt="Americans Against Insecure Billionaires with Tiny Hands PAC Logo">
+      <h1>Americans Against<br class="large-breakpoint" /> Insecure Billionaires<br class="large-breakpoint" /> with Tiny Hands PAC</h1>
+      <p>Lend a hand to help get our <br />#ReleaseTheMeasurements ad on TV!</p>
+
+      <div class="buttons">
+        <div class="er_amt_button">
+          <a href="#" onclick="goDonate(this)" class="btn btn-success button btn-large submittable inner" data-express-amount="100">
+            <span>Donate</span> $1
+          </a>
+        </div>
+        <div class="er_amt_button">
+          <a href="#" onclick="goDonate(this)" class="btn btn-success button btn-large submittable inner" data-express-amount="500">
+            <span>Donate</span> $5
+          </a>
+        </div>
+        <div class="er_amt_button">
+          <a href="#" onclick="goDonate(this)" class="btn btn-success button btn-large submittable inner" data-express-amount="1000">
+            <span>Donate</span> $10
+          </a>
+        </div>
+        <div class="er_amt_button">
+          <a href="#" onclick="goDonate(this)" class="btn btn-success button btn-large submittable inner" data-express-amount="2000">
+            <span>Donate</span> $20
+          </a>
+        </div>
+        <div class="er_amt_button">
+          <a href="#" onclick="goDonate(this)" class="btn btn-success button btn-large submittable inner" data-express-amount="5000">
+            <span>Donate</span> $50
+          </a>
+        </div>
+        <div class="er_amt_button">
+          <a href="#" onclick="goDonate(this)" class="btn btn-success button btn-large submittable inner" data-express-amount="10000">
+            <span>Donate</span> $100
+          </a>
+        </div>
+        <div class="er_amt_button">
+          <a href="#" onclick="goDonate(this)" class="btn btn-success button btn-large submittable inner" data-express-amount="50000">
+            <span>Donate</span> $500
+          </a>
+        </div>
+        <div class="er_amt_button">
+          <a href="#" onclick="goDonate(this)" class="btn btn-success button btn-large submittable inner" data-express-amount="100000">
+            <span>Donate</span> $1,000
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="disclaimer">
+      Paid for by Americans Against Insecure Billionaires with Tiny Hands PAC. Not authorized by any candidate or candidate's committee.
+    </div>
+  </div>
+  <div id="lightbox_content" style="height: 800px">
+    <form onSubmit="nextDonate(this)" style="padding: 10px; border: 2px solid white; background: #000; color: white; font-size: 32px; width: 400px; margin: 0 auto;">
+      <h3>Your Information</h3>
+      <p>
+        <input id="name_input" placeholder="Your Name">
+        <input type="email" id="email_input" placeholder="Your Email">
+      </p>
+      <p>
+        <input id="city_input" placeholder="Your City">
+        <select id="state_input"><option value="">Your State</option><option value="AL">AL</option><option value="AK">AK</option><option value="AZ">AZ</option><option value="AR">AR</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="IA">IA</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="ME">ME</option><option value="MD">MD</option><option value="MA">MA</option><option value="MI">MI</option><option value="MN">MN</option><option value="MS">MS</option><option value="MO">MO</option><option value="MT">MT</option><option value="NE">NE</option><option value="NV">NV</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NY">NY</option><option value="NC">NC</option><option value="ND">ND</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VT">VT</option><option value="VA">VA</option><option value="WA">WA</option><option value="WV">WV</option><option value="WI">WI</option><option value="WY">WY</option></select>
+      </p>
+      <p>
+        <input id="employer_input" placeholder="Your Employer"><br />
+        <em style="font-size: 14px">(We need your employer to comply with Federal Election Laws)</em>
+      </p>
+      <p><button type="submit">Next</button></p>
+    </form>
+  </div>
+  <div id="lightbox_fade" ></div>
+
+  <div id="fb-root"></div>
+  <script>
+    var amount = 2000,
+        handler = StripeCheckout.configure({
+          key: 'pk_live_A2kJcpYemgN9x0yBwLyUzUxy',
+          locale: 'auto',
+          token: function(token) {
+            postForm(token.id)
+            amounts.style.display = 'none'
+            thanks.style.display = 'block'
+          },
+          image: '',
+        })
+
+
+    function postForm(token) {
+      var req = new XMLHttpRequest();
+      req.open("POST", "https://docs.google.com/forms/d/1KNysJvq_3J_hsWRPSAFZ_U8B-xtGfi_XJqXtBBYmBLY/formResponse", true);
+      req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+
+      var data = {
+        'entry.617638349': name_input.value,
+        'entry.1335579254': employer_input.value,
+        'entry.2019488712': city_input.value,
+        'entry.2018513609': state_input.value,
+        'entry.1093280422': email_input.value,
+        'entry.796202537': token,
+        'entry.1778107293': (amount/100).toString()
+      }
+      var request = ''
+      for(var i in data)  {
+        request += i + '=' + data[i] + '&'
+      }
+
+      req.send(request);
+    }
+
+    function goDonate() {
+      amount = parseInt(event.target.getAttribute('data-express-amount'))
+      OpenLightbox()
+      return false
+    }
+    function nextDonate() {
+      var errored = false,
+          inputs = event.target.querySelectorAll('input, select')
+
+      Array.prototype.forEach.call(inputs, function(input) {
+        if( input.value.length < 1 ) {
+          errored = true
+          input.style.borderColor = 'red'
+        } else input.style.borderColor = 'white'
+      })
+
+      if( !errored ) {
+        openStripe()
+        CloseLightBox()
+      }
+      return false
+    }
+
+    function OpenLightbox() {
+      lightbox_content.style.display = 'block'
+      lightbox_fade.style.display = 'block'
+      lightbox_fade.onclick = CloseLightBox
+    }
+
+    function CloseLightBox() {
+      lightbox_content.style.display = 'none'
+      lightbox_fade.style.display = 'none'
+      lightbox_fade.onclick = null
+    }
+
+    function openStripe() {
+      var dollers = (amount/100).toString()
+
+      handler.open({
+        image: 'https://www.donaldtrumphastinyhands.com/share-preview.jpg',
+        name: 'Americans Against Insecure Billionaires with Tiny Hands PAC',
+        description: '$'+dollers+'.00 Donation',
+        amount: amount,
+        email: email_input.value,
+        'panel-label': 'Donate',
+      });
+      return false
+    }
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-74696292-1', 'auto');
+    ga('send', 'pageview');
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  </script>
+
+</body>
+</html>
