@@ -37,7 +37,7 @@ function postForm(token){var req=new XMLHttpRequest();req.open("POST","https://d
 var data={'entry.617638349':name_input.value,'entry.1693424136':job_input.value, 'entry.1335579254':employer_input.value,'entry.2019488712':city_input.value,'entry.2018513609':state_input.value,'entry.1093280422':email_input.value,'entry.796202537':token,'entry.1778107293':(amount_input.value/100).toString()}
 var request=''
 for(var i in data){request+=i+'='+data[i]+'&'}
-alert('data sync suppressed');}
+req.send(request);}
 function nextDonate(){var handler=StripeCheckout.configure({key:'pk_live_A2kJcpYemgN9x0yBwLyUzUxy',image:'https://www.donaldtrumphastinyhands.com/share-preview.jpg',locale:'auto',token:function(token){postForm(token.id);$("#donation-widget").addClass('donation-thanks')},});var errored=false,inputs=event.target.querySelectorAll('input, select')
 Array.prototype.forEach.call(inputs,function(input){if(input.value.length<1){errored=true
 input.style.borderColor='red'}else input.style.borderColor='white'})
