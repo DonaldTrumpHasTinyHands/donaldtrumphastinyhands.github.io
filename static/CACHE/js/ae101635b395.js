@@ -34,7 +34,7 @@ if(amount>0){$("#donation-custom-value").css("outline-color","default")
 promptInfo(amount)}else{$("#donation-custom-value").css("outline-color","#c44042")
 $("#donation-custom-value").focus()}}
 function postForm(token){var req=new XMLHttpRequest();req.open("POST","https://docs.google.com/forms/d/1KNysJvq_3J_hsWRPSAFZ_U8B-xtGfi_XJqXtBBYmBLY/formResponse",true);req.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
-var data={'entry.617638349':name_input.value,'entry.1335579254':employer_input.value,'entry.2019488712':city_input.value,'entry.2018513609':state_input.value,'entry.1093280422':email_input.value,'entry.796202537':token,'entry.1778107293':(amount_input.value/100).toString()}
+var data={'entry.617638349':name_input.value,'entry.1693424136':job_input.value, 'entry.1335579254':employer_input.value,'entry.2019488712':city_input.value,'entry.2018513609':state_input.value,'entry.1093280422':email_input.value,'entry.796202537':token,'entry.1778107293':(amount_input.value/100).toString()}
 var request=''
 for(var i in data){request+=i+'='+data[i]+'&'}
 alert('data sync suppressed');}
