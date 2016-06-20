@@ -245,7 +245,13 @@ section.Hero {
                             $(this).next('.block-faq_answer').slideToggle(500);
                             $(this).toggleClass('close');
                         });
-                        
+                       if( document.location.search.toString().match(/amount\=\d./) ) {
+                         var amount = document.location.search.toString().match(/amount\=\d./)[0].split('=')[1]
+                         var $amount = $('.donation-hero-amounts li:contains($'+amount+')')
+
+                         if( $amount.length > 0 ) $amount.find('a').addClass('.active')
+                         else $('#donation-custom-value').val(amount)
+                      } 
                     });
 
                     function promptInfo(amount) {
